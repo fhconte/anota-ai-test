@@ -1,14 +1,28 @@
 import { NgModule } from '@angular/core';
-import { ServerModule } from '@angular/platform-server';
+import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
-import { AppModule } from './app.module';
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
+import { CardListComponent } from './card-list/card-list.component';
 
 @NgModule({
-  imports: [
-    AppModule,
-    ServerModule,
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    CardListComponent
   ],
-  bootstrap: [AppComponent],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+  ],
+  providers: [
+    provideClientHydration()
+  ],
+  bootstrap: [AppComponent]
 })
-export class AppServerModule {}
+export class AppModule { }

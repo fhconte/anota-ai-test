@@ -1,5 +1,5 @@
 <div class="card-list">
-  <input class="textbox" type="text" [(ngModel)]="searchTerm" (input)="filterCards()" placeholder="Buscar...">
+  <input class="textbox" type="text" [(ngModel)]="searchTerm" (input)="filterCards()" placeholder="Buscar..." />
   <div class="card-container">
     <div *ngFor="let card of filteredCards" class="card">
       <div class="img-box ">
