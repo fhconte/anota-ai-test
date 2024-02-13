@@ -1,0 +1,16 @@
+<div class="card-list">
+  <input class="textbox" type="text" [(ngModel)]="searchTerm" (input)="filterCards()" placeholder="Buscar...">
+  <div class="card-container">
+    <div *ngFor="let card of filteredCards" class="card">
+      <div class="img-box ">
+        <img [src]="card.img" alt="Item image" title="Item image" [title]="card.title">
+      </div>
+      <div class="info">
+        <div class="card-title">{{ card.title }}</div>
+        <div class="card-description">{{ card.description }}</div>
+        <div class="card-type">{{ card.type }}</div>
+      </div>
+      <button class="delete-button" (click)="deleteCard(card.id)">Delete</button>
+    </div>
+  </div>
+</div>

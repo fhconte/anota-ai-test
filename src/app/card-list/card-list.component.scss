@@ -1,0 +1,121 @@
+.card-list {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+  > .button {
+    outline: 0;
+    background: none;
+    background-color: rgba(38, 50, 56, 0.8);
+    float: left;
+    height: 42px;
+    width: 42px;
+    text-align: center;
+    line-height: 42px;
+    border: 0;
+    color: #FFF;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 16px;
+    text-rendering: auto;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    -webkit-transition: background-color .4s ease;
+    transition: background-color .4s ease;
+    -webkit-border-radius: 0 4px 4px 0;
+    border-radius: 0 4px 4px 0;
+
+    &:hover {
+      background-color: rgba(0, 150, 136, 0.8);
+    }
+  }
+
+  > .textbox {
+    outline: 0;
+    height: 42px;
+    line-height: 42px;
+    padding: 0 16px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #212121;
+    border: 0;
+    float: left;
+    -webkit-border-radius: 4px 0 0 4px;
+    border-radius: 4px 0 0 4px;
+    width: 100%;
+    max-width: 750px;
+    margin: 1rem auto 2rem;
+
+    &:focus {
+      outline: 0;
+      background-color: #FFF;
+    }
+  }
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* Repete 1fr 6 vezes */
+  grid-template-rows: 1fr;
+  gap: 0;
+  width: 100vw;
+  padding-right: 2.5rem;
+
+  .card {
+    border-radius: 0.3125rem;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    min-width: 245px;
+    background-color: #FFFFFF;
+    overflow: hidden;
+    height: auto;
+
+    .img-box {
+      position: relative;
+      width: 100%;
+      height: 180px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        min-height: 100%;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .info {
+      padding: 0.8rem;
+
+      .card-title {
+        font-weight: 500;
+        font-size: 1.8rem;
+        margin: 0.4rem 0 0.8rem;
+      }
+
+      .card-description {
+        margin-top: 0.3125rem;
+        font-size: 0.875rem;
+      }
+
+      .card-type {
+        font-style: italic;
+      }
+    }
+
+    .delete-button {
+      margin-top: 0.625rem;
+      background-color: #ff6347;
+      color: white;
+      border: none;
+      border-radius: 0.3125rem;
+      padding: 0.3125rem 0.625rem;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #dc3545; /* Darker red on hover */
+      }
+    }
+  }
+}
