@@ -42,6 +42,10 @@
     width: 100%;
     max-width: 750px;
     margin: 1rem auto 2rem;
+    padding-right: 30px;
+    // background-image: url('../../assets/');
+    background-position: right 10px center; /* posição da imagem */
+    background-repeat: no-repeat; /* evita a repetição da imagem */
 
     &:focus {
       outline: 0;
@@ -58,11 +62,48 @@
   width: 100vw;
   padding-right: 2.5rem;
 
+  .box {
+    position: relative;
+    transition: transform 0.3s ease; /* Adicionando uma transição suave */
+
+      &:hover {
+        transform: scale(1.05); /* Aumentando o tamanho do card em 5% no hover */
+      }
+
+    .delete-button {
+      width: 30px;
+      height: 30px;
+      margin-top: 0.625rem;
+      background-color: white;
+      color: black;
+      border: none;
+      border-radius: 3rem;
+      padding: 0.21rem 0.225rem;
+      cursor: pointer;
+      border: 1px solid #DDD;
+      position: absolute;
+      top: -25px;
+      right: 0px;
+      z-index: 9;
+
+      .delete-icon {
+        transition: transform 0.3s ease;
+      }
+      &:hover {
+        background-color: #b9b9b9;
+
+        .delete-icon {
+          transform: rotate(90deg);
+        }
+      }
+    }
+  }
+
   .card {
     border-radius: 0.3125rem;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
     min-width: 245px;
     background-color: #FFFFFF;
     overflow: hidden;
@@ -83,6 +124,32 @@
         left: 50%;
         transform: translate(-50%, -50%);
       }
+
+      .card-type {
+        font-size: 0.7rem;
+        font-weight: 500;
+        color: #FFFFFF;
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+
+        span {
+          padding: 0.15rem 0.3rem;
+          border-radius: 0.3125rem;
+        }
+
+        .pizza {
+          background-color: #9e8511;
+        }
+
+        .paisagem {
+          background-color: #0359fc;
+        }
+
+        .flor {
+          background-color: #ff004c;
+        }
+      }
     }
 
     .info {
@@ -95,26 +162,20 @@
       }
 
       .card-description {
-        margin-top: 0.3125rem;
-        font-size: 0.875rem;
-      }
+        width: 100%;
+        height: 9.2em;
+        overflow: hidden;
+        white-space: pre-wrap;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
 
-      .card-type {
-        font-style: italic;
-      }
-    }
-
-    .delete-button {
-      margin-top: 0.625rem;
-      background-color: #ff6347;
-      color: white;
-      border: none;
-      border-radius: 0.3125rem;
-      padding: 0.3125rem 0.625rem;
-      cursor: pointer;
-
-      &:hover {
-        background-color: #dc3545; /* Darker red on hover */
+        p {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 8;
+          -webkit-box-orient: vertical;
+        }
       }
     }
   }

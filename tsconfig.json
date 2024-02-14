@@ -3,7 +3,10 @@
   "compileOnSave": false,
   "compilerOptions": {
     "outDir": "./dist/out-tsc",
-    "types": [],
+    "types": [
+      "jest",
+      "mocha"
+    ],
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitOverride": true,

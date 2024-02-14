@@ -1,16 +1,32 @@
 <div class="card-list">
   <input class="textbox" type="text" [(ngModel)]="searchTerm" (input)="filterCards()" placeholder="Buscar..." />
   <div class="card-container">
-    <div *ngFor="let card of filteredCards" class="card">
-      <div class="img-box ">
-        <img [src]="card.img" alt="Item image" title="Item image" [title]="card.title">
+    <div *ngFor="let card of filteredCards" class="box">
+      <button class="delete-button" (click)="deleteCard(card.id)">
+        <svg class="delete-icon ionicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><title>Close</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M368 368L144 144M368 144L144 368"/></svg>
+      </button>
+      <div class="card">
+        <div class="img-box ">
+          <img [src]="card.img" alt="Item image" title="Item image" [title]="card.title">
+          <div class="card-type">
+            <ng-container *ngIf="card.type === '1'">
+              <span class="paisagem">Paisagem</span>
+            </ng-container>
+            <ng-container *ngIf="card.type === '2'">
+              <span class="flor">Flor</span>
+            </ng-container>
+            <ng-container *ngIf="card.type === '3'">
+              <span class="pizza">Pizza</span>
+            </ng-container>
+          </div>
+        </div>
+        <div class="info">
+          <div class="card-title">{{ card.title }}</div>
+          <div class="card-description">
+            <p>{{ card.description }}</p>
+          </div>
+        </div>
       </div>
-      <div class="info">
-        <div class="card-title">{{ card.title }}</div>
-        <div class="card-description">{{ card.description }}</div>
-        <div class="card-type">{{ card.type }}</div>
-      </div>
-      <button class="delete-button" (click)="deleteCard(card.id)">Delete</button>
     </div>
   </div>
 </div>
