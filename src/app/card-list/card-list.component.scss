@@ -104,7 +104,7 @@
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     margin-left: 1rem;
     margin-right: 1rem;
-    min-width: 245px;
+    // min-width: 245px;
     background-color: #FFFFFF;
     overflow: hidden;
     height: auto;
@@ -181,16 +181,9 @@
   }
 }
 
-@media screen and (max-width: 1900px) {
-  .card-container {
-    grid-template-columns: repeat(5, 1fr); /* Two cards per row on smaller screens */
-    padding-right: 0; /* Remove right padding */
-  }
-}
-
 @media screen and (max-width: 1280px) {
   .card-container {
-    grid-template-columns: repeat(4, 1fr); /* Two cards per row on smaller screens */
+    grid-template-columns: repeat(5, 1fr); /* Two cards per row on smaller screens */
   }
 }
 
@@ -200,7 +193,13 @@
   }
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 840px) {
+  .card-container {
+    grid-template-columns: repeat(3, 1fr); /* Two cards per row on smaller screens */
+  }
+}
+
+@media screen and (max-width: 600px) {
   .card-container {
     grid-template-columns: repeat(2, 1fr); /* Two cards per row on smaller screens */
   }
