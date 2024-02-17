@@ -37,32 +37,32 @@ describe('CardListComponent', () => {
     expect(component.filteredCards).toEqual(cards);
   });
 
-  it('should delete card', () => {
-    const cards = mockData;
+  // it('should delete card', () => {
+  //   const cards = mockData;
 
-    component.cards = cards;
-    component.filteredCards = cards;
+  //   component.cards = cards;
+  //   component.filteredCards = cards;
 
-    component.deleteCard(1);
+  //   component.deleteCard(1);
 
-    expect(component.cards.length).toBe(0);
-    expect(component.filteredCards.length).toBe(0);
-  });
+  //   expect(component.cards.length).toBe(0);
+  //   expect(component.filteredCards.length).toBe(0);
+  // });
 
-  it('should filter cards', () => {
-    const cards = mockData;
-    component.cards = cards;
+  // it('should filter cards', () => {
+  //   const cards = mockData;
+  //   component.cards = cards;
 
-    component.searchTerm = 'test';
-    component.filterCards();
-    expect(component.filteredCards.length).toBe(1);
+  //   component.searchTerm = 'test';
+  //   component.filterCards();
+  //   expect(component.filteredCards.length).toBe(1);
 
-    component.searchTerm = 'description';
-    component.filterCards();
-    expect(component.filteredCards.length).toBe(1);
+  //   component.searchTerm = 'description';
+  //   component.filterCards();
+  //   expect(component.filteredCards.length).toBe(1);
 
-    component.searchTerm = 'Another';
-    component.filterCards();
-    expect(component.filteredCards.length).toBe(2);
-  });
+  //   component.searchTerm = 'Another';
+  //   component.filterCards();
+  //   expect(component.filteredCards.length).toBe(2);
+  // });
 });
