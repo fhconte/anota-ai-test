@@ -1,10 +1,19 @@
-# Anota Ai Test
+# AngularJS Cards List
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.3.
+All intructions are using Windows PowerShell 5.1
+
+## Install dependencies
+
+Run `npm install`
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
+## SSR
+
+Run `ng build ; if ($LastExitCode -eq 0) { npm run ssr }` to run SSR application on `http://localhost:4000/`
 
 ## Code scaffolding
 
