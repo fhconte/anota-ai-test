@@ -4,7 +4,7 @@ version = 1
 name = "javascript"
 
   [analyzers.meta]
-  plugins = ["angularjs"]
+  plugins = ["angular"]
   environment = [
     "nodejs",
     "jasmine"
