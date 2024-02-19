@@ -34,3 +34,23 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## To do list:
+
+- Optimize performance
+
+- Better folders structure (modules)
+
+- Implement routing
+
+- Implement unit tests
+
+- Implement e2e tests
+
+- Documentation comments not found for functions and classes
+
+- Found explicit type declarations
+
+- Found redundant literal in a logical expression
+
+- Detected the use of classes as namespaces
