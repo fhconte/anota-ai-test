@@ -38,19 +38,15 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## To do list:
 
 - Optimize performance
-
 - Better folders structure (modules)
-
 - Implement routing
-
 - Implement unit tests
-
 - Implement e2e tests
-
 - Documentation comments not found for functions and classes
-
 - Found explicit type declarations
-
 - Found redundant literal in a logical expression
-
 - Detected the use of classes as namespaces
+
+## Deep Source Report
+
+[DeepSource](https://app.deepsource.com/gh/fhconte/anota-ai-test/issues?category=all&page=1)

@@ -1,16 +1,15 @@
-// import { TestBed } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
+import { HttpClientModule } from '@angular/common/http';
+import { CardService } from './card.service';
 
-// import { CardService } from './card.service';
+describe('CardService', () => {
+  beforeEach(() => TestBed.configureTestingModule({
+    imports: [HttpClientModule],
+    providers: [CardService]
+  }));
 
-// describe('CardService', () => {
-//   let service: CardService;
-
-//   beforeEach(() => {
-//     TestBed.configureTestingModule({});
-//     service = TestBed.inject(CardService);
-//   });
-
-//   it('should be created', () => {
-//     expect(service).toBeTruthy();
-//   });
-// });
+  it('should be created', () => {
+    const service: CardService = TestBed.get(CardService);
+    expect(service).toBeTruthy();
+  });
+});
