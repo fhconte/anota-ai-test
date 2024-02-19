@@ -8,7 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "ssr": "npm run serve:ssr:anota-ai-test",
-    "serve:ssr:anota-ai-test": "node dist/anota-ai-test/server/server.mjs"
+    "serve:ssr:anota-ai-test": "node dist/anota-ai-test/server/server.mjs",
+    "robots": "copy src\\robots.txt dist\\anota-ai-test\\browser"
   },
   "private": true,
   "dependencies": {
@@ -37,6 +38,10 @@
     "@types/jest": "^29.5.12",
     "@types/mocha": "^10.0.6",
     "@types/node": "^18.18.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.1",
+    "@typescript-eslint/parser": "^7.0.1",
+    "eslint": "^8.56.0",
+    "eslint-plugin-angular": "^4.1.0",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
