@@ -6,7 +6,7 @@ import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { CardListComponent } from './card-list/card-list.component';
+import { CardListComponent } from './app-card-list/app-card-list.component';
 
 @NgModule({
   declarations: [

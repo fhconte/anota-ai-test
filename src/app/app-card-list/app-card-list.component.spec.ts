@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { CardListComponent } from './card-list.component';
+import { CardListComponent } from './app-card-list.component';
 import { CardService } from '../card/card.service';
 import { of } from 'rxjs';
 import mockData from '../../mockData.json';
